@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace TcpChatServer
 {
@@ -10,6 +6,12 @@ namespace TcpChatServer
     {
         static void Main(string[] args)
         {
+            if (args.Length == 0)
+                Server.Listen("25.31.100.46");
+            else
+                Server.Listen(args[0]);
+
+            Console.ReadKey();
         }
     }
 }
